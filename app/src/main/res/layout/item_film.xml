@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/grey"
+    app:cardCornerRadius="15dp"
+    android:elevation="5dp"
+    android:layout_margin="20dp"
+    android:layout_marginBottom="10dp"
+    android:layout_height="wrap_content">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/filmImg"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <TextView
+            android:id="@+id/judulName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/filmImg"
+            app:layout_constraintStart_toStartOf="@id/filmImg"
+            app:layout_constraintEnd_toEndOf="@id/filmImg"
+            android:text="Judul"/>
+
+        <TextView
+            android:id="@+id/tglFilm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/judulName"
+            app:layout_constraintStart_toStartOf="@id/judulName"
+            app:layout_constraintEnd_toEndOf="@id/judulName"
+            android:text="Tanggal"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
