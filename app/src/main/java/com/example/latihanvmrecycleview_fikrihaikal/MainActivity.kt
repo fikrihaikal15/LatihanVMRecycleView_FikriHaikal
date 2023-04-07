@@ -10,14 +10,20 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
+    //variable rvFilm dengan tipeData recycleView
     lateinit var rvFilm : RecyclerView
+
+    //variable filmVm dengan tipeData FilmViewModel yang sudah kita buat
     lateinit var filmVm : FilmViewModel
+
+    //variable filmAdapter dengan tipeData FilmAdapter yang sudah kita buat
     lateinit var filmAdapter: FilmAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //initFilm ini dipanggil dari fun initFilm yang sudah dibuat
         initFilm()
         filmVm = ViewModelProvider(this).get(FilmViewModel::class.java)
 
@@ -30,7 +36,8 @@ class MainActivity : AppCompatActivity() {
     private fun initFilm() {
         rvFilm = findViewById(R.id.rvFilm)
         filmAdapter = FilmAdapter(ArrayList())
-//        rvFilm.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
+
+        //disini layoutManager menggunakan GridLayout dengan colom 2
        rvFilm.layoutManager = GridLayoutManager(this,2)
         rvFilm.adapter = filmAdapter
     }

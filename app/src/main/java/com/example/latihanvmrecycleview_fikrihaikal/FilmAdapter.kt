@@ -7,6 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+//class film adapter dengan properties listFilm dengan tipe data ArrayList, class FilmAdapter ini
+//berfungsi untuk menampilkan data pada recycleView secara berulang pada Activity yang telah dibuat
 class FilmAdapter(var listFilm : ArrayList<DataFilm>) : RecyclerView.Adapter<FilmAdapter.ViewHolder>() {
 
     class ViewHolder(itemView : View):RecyclerView.ViewHolder(itemView) {
